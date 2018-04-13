@@ -36,15 +36,6 @@ int diferencial(double Beta, double Gamma, int Caso )
 			S[i] = -h*Beta*I[i-1]*S[i-1] + S[i-1];
 			I[i] = h*((Beta*I[i-1]*S[i-1]) - (Gamma*I[i-1])) + I[i-1];
 			cout << t[i] << " " << S[i] << " " << I[i] << endl;
-			if (I[i] > infect)
-			{
-				infect = I[i];
-				maximo = t[i];
-			}
-		}
-		else
-		{
-			return 0;
 		}
 	}
 	return 1;
